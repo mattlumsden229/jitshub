@@ -16,11 +16,6 @@ connectDB();
 
 app.use(isAuth);
 
-// const corsOptions = {
-//   origin: "https://localhost:3000/",
-//   credentials: true,
-// };
-
 app.use(cors());
 
 //Body Parsing

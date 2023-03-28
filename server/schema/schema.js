@@ -190,40 +190,6 @@ const mutation = new GraphQLObjectType({
         }
       },
     },
-    // Add a user
-    // addUser: {
-    //     type: UserType,
-    //     args: {
-    //         username: { type: GraphQLNonNull(GraphQLString) },
-    //         email: { type: GraphQLNonNull(GraphQLString) },
-    //         password: { type: GraphQLNonNull(GraphQLString) },
-    //     },
-    //     resolve(parent, args) {
-    //         const user = new User({
-    //             username: args.username,
-    //             email: args.email,
-    //             password: args.password,
-    //         });
-
-    //         return user.save();
-    //     },
-    // },
-    // Delete a user
-    deleteUser: {
-      type: UserType,
-      args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
-      },
-      resolve(parent, args) {
-        Post.find({ userId: args.id }).then((posts) => {
-          posts.forEach((post) => {
-            post.deleteOne();
-          });
-        });
-
-        return User.findByIdAndRemove(args.id);
-      },
-    },
     // Create a post
     createPost: {
       type: PostType,
@@ -259,35 +225,6 @@ const mutation = new GraphQLObjectType({
         }
       },
     },
-    // Add a post
-    // addPost: {
-    //     type: PostType,
-    //     args: {
-    //         title: { type: GraphQLNonNull(GraphQLString) },
-    //         description: { type: GraphQLNonNull(GraphQLString) },
-    //         forum: {
-    //             type: new GraphQLEnumType({
-    //                 name: 'PostForum',
-    //                 values: {
-    //                     general: { value: 'General' },
-    //                     tournaments: { value: 'Tournaments' },
-    //                 },
-    //             }),
-    //             defaultValue: 'General',
-    //         },
-    //         userId: { type: GraphQLNonNull(GraphQLID) },
-    //     },
-    //     resolve(parent, args) {
-    //         const post = new Post({
-    //             title: args.title,
-    //             description: args.description,
-    //             forum: args.forum,
-    //             userId: args.userId,
-    //         });
-
-    //         return post.save();
-    //     },
-    // },
     // Delete a post
     deletePost: {
       type: PostType,
