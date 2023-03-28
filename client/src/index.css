@@ -1,0 +1,85 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-brand img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.btn {
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.btn-primary,
+.bg-primary {
+  background-color: #309c85 !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #309c85;
+  opacity: 0.9;
+}
+
+.btn-outline-secondary {
+  background-color: white !important;
+  color: rgb(138, 93, 180) !important;
+  border: solid 2px rgb(138, 93, 180) !important;
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: rgb(138, 93, 180) !important;
+  color: white !important;
+}
+
+.btn.btn-outline-dark:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn.btn-outline-dark:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn.btn-outline-dark:hover {
+  background-color: black;
+  color: white;
+}
+
+.rounded-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.rank-icon {
+  height: 50px;
+  width: 65px;
+}
+
+.pfpbtn {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  border: none;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
